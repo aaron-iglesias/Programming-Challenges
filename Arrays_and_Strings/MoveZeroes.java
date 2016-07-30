@@ -7,11 +7,13 @@
 
 public class MoveZeroes {
 	public void moveZeroes(int[] nums) {
+		// Let nums[0], nums[1], ..., nums[n - 1] contain all n nonzero elements in nums
 		int j = 0;
 		for(int i = 0; i < nums.length; ++i) {
 			if(nums[i] != 0)
 				nums[j++] = nums[i];
 		}
+		// Set remaining elements of nums to 0
 		while(j != nums.length) {
 			nums[j++] = 0;
 		}
